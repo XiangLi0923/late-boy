@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿莉的图</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+}
+.card {
+  background: #fff; border-radius: 20px; padding: 48px; text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 420px; width: 90%;
+}
+h1 { font-size: 28px; color: #6C5CE7; margin-bottom: 8px; }
+.subtitle { color: #888; font-size: 14px; margin-bottom: 24px; }
+.status { margin: 20px 0; font-size: 36px; }
+.btn {
+  display: inline-block; padding: 14px 36px; margin: 6px;
+  background: #6C5CE7; color: #fff; text-decoration: none;
+  border-radius: 12px; font-size: 16px; font-weight: 600;
+  transition: all 0.2s; border: none; cursor: pointer;
+}
+.btn:hover { background: #5A4BD1; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(108,92,231,0.4); }
+.btn-outline { background: #fff; color: #6C5CE7; border: 2px solid #6C5CE7; }
+.btn-outline:hover { background: #f5f3ff; }
+.info { margin-top: 20px; font-size: 12px; color: #bbb; }
+.loading { animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>🧩 阿莉的图</h1>
+  <p class="subtitle">任意图片 → 拼豆蓝图</p>
+
+  <div id="statusArea" class="status">🔍</div>
+  <p id="statusText" style="color:#888;font-size:14px;margin-bottom:16px;">正在检测服务...</p>
+
+  <a id="launchBtn" class="btn" href="http://localhost:5173" target="_blank">
+    🚀 打开阿莉的图
+  </a>
+  <button id="startBtn" class="btn btn-outline" style="display:none;">
+    ⚡ 一键启动服务
+  </button>
+
+  <p class="info">
+    也可直接访问：<br>
+    <code style="background:#f5f5f5;padding:2px 8px;border-radius:4px;">http://localhost:5173</code>
+  </p>
+</div>
+
+<script>
+// Auto-detect if server is already running
+fetch('http://localhost:5173/', { method: 'HEAD' })
+  .then(r => {
+    document.getElementById('statusArea').textContent = '✅';
+    document.getElementById('statusText').textContent = '服务已运行，点击下方按钮打开';
+  })
+  .catch(() => {
+    document.getElementById('statusArea').innerHTML = '<span class="loading">⏳</span>';
+    document.getElementById('statusText').textContent = '服务未启动，请先运行启动脚本';
+    document.getElementById('launchBtn').style.opacity = '0.4';
+    document.getElementById('launchBtn').style.pointerEvents = 'none';
+  });
+</script>
+</body>
+</html>

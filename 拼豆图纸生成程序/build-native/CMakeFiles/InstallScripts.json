@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/perler-project/build-native/cmake_install.cmake",
+		"D:/perler-project/build-native/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,17 @@
+D:/perler-project/build-native/CMakeFiles/perler_engine.dir
+D:/perler-project/build-native/CMakeFiles/perler_cli.dir
+D:/perler-project/build-native/CMakeFiles/test.dir
+D:/perler-project/build-native/CMakeFiles/edit_cache.dir
+D:/perler-project/build-native/CMakeFiles/rebuild_cache.dir
+D:/perler-project/build-native/CMakeFiles/list_install_components.dir
+D:/perler-project/build-native/CMakeFiles/install.dir
+D:/perler-project/build-native/CMakeFiles/install/local.dir
+D:/perler-project/build-native/CMakeFiles/install/strip.dir
+D:/perler-project/build-native/tests/CMakeFiles/perler_tests.dir
+D:/perler-project/build-native/tests/CMakeFiles/test.dir
+D:/perler-project/build-native/tests/CMakeFiles/edit_cache.dir
+D:/perler-project/build-native/tests/CMakeFiles/rebuild_cache.dir
+D:/perler-project/build-native/tests/CMakeFiles/list_install_components.dir
+D:/perler-project/build-native/tests/CMakeFiles/install.dir
+D:/perler-project/build-native/tests/CMakeFiles/install/local.dir
+D:/perler-project/build-native/tests/CMakeFiles/install/strip.dir

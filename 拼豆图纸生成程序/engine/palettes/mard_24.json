@@ -1,0 +1,127 @@
+﻿{
+  "brand": "Mard 24-Color Basic",
+  "description": "24-color basic set of Mard beads.",
+  "version": "3.0",
+  "colors": [
+    {
+      "hex": "#F77C31",
+      "code": "A10",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFDD99",
+      "code": "A11",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FE9F72",
+      "code": "A12",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFC365",
+      "code": "A13",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FD543D",
+      "code": "A14",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFF365",
+      "code": "A15",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFFF9F",
+      "code": "A16",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFE36E",
+      "code": "A17",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FEBE7D",
+      "code": "A18",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FD7C72",
+      "code": "A19",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFFFD5",
+      "code": "A2",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFD568",
+      "code": "A20",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFE395",
+      "code": "A21",
+      "name": "Asher"
+    },
+    {
+      "hex": "#F4F57D",
+      "code": "A22",
+      "name": "Asher"
+    },
+    {
+      "hex": "#E6C9B7",
+      "code": "A23",
+      "name": "Asher"
+    },
+    {
+      "hex": "#F7F8A2",
+      "code": "A24",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFD67D",
+      "code": "A25",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFC830",
+      "code": "A26",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FEFF8B",
+      "code": "A3",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FBED56",
+      "code": "A4",
+      "name": "Asher"
+    },
+    {
+      "hex": "#F4D738",
+      "code": "A5",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FEAC4C",
+      "code": "A6",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FE8B4C",
+      "code": "A7",
+      "name": "Asher"
+    },
+    {
+      "hex": "#FFDA45",
+      "code": "A8",
+      "name": "Asher"
+    }
+  ]
+}

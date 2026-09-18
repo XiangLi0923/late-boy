@@ -1,0 +1,91 @@
+/* 阿莉的图 — 小程序样式 */
+page { background: #f0f2f5; font-family: -apple-system, 'PingFang SC', sans-serif; }
+.container { padding: 12px; padding-bottom: 40px; }
+
+.header { text-align: center; padding: 14px 0 8px; }
+.title { font-size: 20px; font-weight: 700; color: #6C5CE7; }
+
+.section {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.preview-image { width: 100%; max-height: 180px; border-radius: 6px; margin-top: 6px; }
+.hint { font-size: 12px; color: #999; }
+
+.input-row { display: flex; align-items: center; gap: 6px; font-size: 14px; margin-bottom: 6px; }
+.num-input {
+  width: 56px; border: 1px solid #ddd; border-radius: 6px;
+  padding: 5px 8px; text-align: center; font-size: 14px;
+}
+.times { font-size: 16px; color: #bbb; }
+
+.presets { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+
+.btn {
+  padding: 8px 18px; border: 1px solid #ddd; border-radius: 6px;
+  background: #fff; font-size: 13px; text-align: center;
+}
+.btn-primary { background: #6C5CE7; color: #fff; border-color: #6C5CE7; }
+.btn-small { padding: 5px 10px; font-size: 12px; }
+.btn-process {
+  background: #6C5CE7; color: #fff; border: none;
+  margin: 12px 0; padding: 14px; font-size: 16px; font-weight: 600;
+  border-radius: 10px;
+}
+
+.active { background: #6C5CE7; color: #fff; border-color: #6C5CE7; }
+
+.picker { padding: 8px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; }
+
+.radio-group { margin-top: 8px; }
+.radio-item { display: flex; align-items: center; gap: 6px; padding: 4px 0; font-size: 13px; }
+.checkbox-group { margin-top: 8px; }
+.checkbox-item { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+
+/* Toggle */
+.toggle-row {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+}
+
+/* Canvas */
+.bead-canvas {
+  width: 100%; border: 1px solid #eee; border-radius: 6px; background: #fff;
+}
+.canvas-controls {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  margin-top: 8px;
+}
+.scale-text { font-size: 12px; color: #888; min-width: 40px; text-align: center; }
+
+/* Legend */
+.legend-list { max-height: 240px; overflow-y: scroll; }
+.legend-item {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 0; border-bottom: 1px solid #f5f5f5; font-size: 12px;
+}
+.legend-swatch {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 1px solid #ddd; flex-shrink: 0;
+}
+.legend-code { font-family: monospace; color: #888; font-size: 11px; width: 32px; }
+.legend-name { flex: 1; }
+.legend-count { color: #6C5CE7; font-weight: 700; font-size: 12px; width: 30px; text-align: right; }
+
+/* Error */
+.error-box {
+  background: #fdecea; color: #E74C3C;
+  padding: 12px; border-radius: 8px; font-size: 13px; margin-top: 10px;
+}

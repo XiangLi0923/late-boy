@@ -1,0 +1,109 @@
+<!-- 阿莉的图 — 小程序首页 -->
+<view class="container">
+  <view class="header">
+    <text class="title">阿莉的图</text>
+  </view>
+
+  <!-- Image Selection -->
+  <view class="section">
+    <view class="section-title">1. 选择图片</view>
+    <button class="btn btn-primary" bindtap="chooseImage">
+      {{imagePath ? '更换图片' : '从相册选择'}}
+    </button>
+    <image wx:if="{{imagePath}}" class="preview-image" src="{{imagePath}}" mode="aspectFit" />
+    <text wx:if="{{imageWidth > 0}}" class="hint">{{imageWidth}} × {{imageHeight}}</text>
+  </view>
+
+  <!-- Settings -->
+  <view class="section">
+    <view class="section-title">2. 网格设置</view>
+    <view class="input-row">
+      <text>宽:</text>
+      <input class="num-input" type="number" value="{{gridWidth}}" bindinput="onGridWidth" />
+      <text class="times">×</text>
+      <text>高:</text>
+      <input class="num-input" type="number" value="{{gridHeight}}" bindinput="onGridHeight" />
+    </view>
+    <view class="presets">
+      <button wx:for="{{presets}}" wx:key="label"
+        class="btn btn-small {{gridWidth === item.w && gridHeight === item.h ? 'active' : ''}}"
+        data-w="{{item.w}}" data-h="{{item.h}}" bindtap="setPreset"
+      >{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">3. 调色板 & 抖动</view>
+    <picker mode="selector" range="{{paletteNames}}" value="{{paletteIndex}}" bindchange="onPaletteChange">
+      <view class="picker">{{paletteNames[paletteIndex]}} ({{paletteColors.length}}色)</view>
+    </picker>
+    <radio-group class="radio-group" bindchange="onDitherChange">
+      <label class="radio-item" wx:for="{{ditherModes}}" wx:key="value">
+        <radio value="{{item.value}}" checked="{{ditherMode === item.value}}" />
+        <text>{{item.label}}</text>
+      </label>
+    </radio-group>
+    <checkbox-group class="checkbox-group" bindchange="onMergeChange">
+      <label class="checkbox-item">
+        <checkbox value="background" checked="{{removeBackground}}" />
+        <text>去背景（只保留主体）</text>
+      </label>
+      <label class="checkbox-item">
+        <checkbox value="merge" checked="{{mergeSimilarColors}}" />
+        <text>相似色合并（减少用色）</text>
+      </label>
+    </checkbox-group>
+  </view>
+
+  <!-- Process -->
+  <button class="btn btn-process" bindtap="processImage" disabled="{{!imagePath || processing}}">
+    {{processing ? '⏳ 处理中...' : '🔨 生成图纸'}}
+  </button>
+
+  <hidden-canvas wx:if="{{!beadGridReady}}" id="hiddenCanvas" style="width:1px;height:1px;position:fixed;left:-999px;" type="2d" />
+
+  <!-- Result -->
+  <view wx:if="{{beadGridReady}}" class="section">
+    <view class="section-title">
+      4. 图纸 ({{beadGridW}}×{{beadGridH}} · {{usedColors}}色 · {{paletteBrand}})
+    </view>
+
+    <!-- Toggle -->
+    <view class="toggle-row">
+      <button class="btn btn-small {{showLabels ? 'active' : ''}}" bindtap="toggleLabels">
+        {{showLabels ? '📋 主图(带标号)' : '🎨 副图(纯效果)'}}
+      </button>
+      <text class="hint">点击切换主/副图</text>
+    </view>
+
+    <!-- Canvas -->
+    <canvas type="2d" id="beadCanvas" class="bead-canvas"
+      style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;" />
+
+    <!-- Zoom Controls -->
+    <view class="canvas-controls">
+      <button class="btn btn-small" bindtap="zoomIn">🔍+</button>
+      <button class="btn btn-small" bindtap="zoomOut">🔍-</button>
+      <text class="scale-text">{{scale}}%</text>
+      <button class="btn btn-small" bindtap="saveToAlbum">💾 保存</button>
+    </view>
+  </view>
+
+  <!-- Color Legend -->
+  <view wx:if="{{beadGridReady}}" class="section">
+    <view class="section-title">颜色用量</view>
+    <view class="legend-list">
+      <view class="legend-item" wx:for="{{paletteColors}}" wx:key="code" wx:if="{{colorCounts[index] > 0}}">
+        <view class="legend-swatch" style="background-color: {{item.hex}};"></view>
+        <text class="legend-code">{{item.code}}</text>
+        <text class="legend-name">{{item.name}}</text>
+        <text class="legend-count">{{colorCounts[index]}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Error -->
+  <view wx:if="{{errorMsg}}" class="error-box">
+    <text>{{errorMsg}}</text>
+  </view>
+</view>

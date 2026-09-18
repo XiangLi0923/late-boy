@@ -1,0 +1,10 @@
+{
+  "name": "perler-anonymous-analytics-collector",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs",
+    "analyze": "node analyze.mjs data/events.jsonl"
+  }
+}

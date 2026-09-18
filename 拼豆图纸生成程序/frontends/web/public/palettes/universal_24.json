@@ -1,0 +1,31 @@
+{
+  "brand": "Hama Midi (24-Color Starter)",
+  "version": "2.0",
+  "description": "Curated 24-color starter subset of Hama Midi. All codes and hex values are official.",
+  "colors": [
+    {"name": "White", "code": "H01", "hex": "#ECEDED"},
+    {"name": "Cream", "code": "H02", "hex": "#F0E8B9"},
+    {"name": "Yellow", "code": "H03", "hex": "#F0B901"},
+    {"name": "Orange", "code": "H04", "hex": "#E64F27"},
+    {"name": "Red", "code": "H05", "hex": "#B63136"},
+    {"name": "Pink", "code": "H06", "hex": "#E1889F"},
+    {"name": "Purple", "code": "H07", "hex": "#694A82"},
+    {"name": "Dark Blue", "code": "H08", "hex": "#2C4690"},
+    {"name": "Blue", "code": "H09", "hex": "#305CB0"},
+    {"name": "Dark Green", "code": "H10", "hex": "#256847"},
+    {"name": "Light Green", "code": "H11", "hex": "#49AE89"},
+    {"name": "Brown", "code": "H12", "hex": "#534137"},
+    {"name": "Grey", "code": "H17", "hex": "#83888A"},
+    {"name": "Black", "code": "H18", "hex": "#2E2F31"},
+    {"name": "Light Brown", "code": "H21", "hex": "#A5693F"},
+    {"name": "Flesh", "code": "H26", "hex": "#DE9B90"},
+    {"name": "Tan", "code": "H27", "hex": "#DEB48B"},
+    {"name": "Burgundy", "code": "H29", "hex": "#B9395E"},
+    {"name": "Pastel Blue", "code": "H31", "hex": "#6797AE"},
+    {"name": "Pastel Yellow", "code": "H43", "hex": "#F0EA37"},
+    {"name": "Pastel Green", "code": "H47", "hex": "#83CB70"},
+    {"name": "Sky Blue", "code": "H49", "hex": "#4998BC"},
+    {"name": "Dark Grey", "code": "H71", "hex": "#464541"},
+    {"name": "Peach", "code": "H78", "hex": "#FFC99A"}
+  ]
+}

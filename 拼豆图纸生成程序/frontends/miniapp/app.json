@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subpackages": [],
+  "window": {
+    "navigationBarTitleText": "阿莉的图",
+    "navigationBarBackgroundColor": "#6C5CE7",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f8f9fa",
+    "disableScroll": true
+  },
+  "permission": {
+    "scope.writePhotosAlbum": {
+      "desc": "保存阿莉的图到相册"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

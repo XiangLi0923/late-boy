@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($root = \"D:\\\\Claude dates 无敌牛娃闪闪\\\\拼豆图纸生成程序\"; foreach \\($p in @\\(\"frontends\\\\desktop\\\\renderer\",\"frontends\\\\desktop\\\\renderer\\\\palettes\",\"frontends\\\\desktop\\\\renderer\\\\assets\",\"frontends\\\\desktop\\\\assets\",\"frontends\\\\desktop\\\\native\",\"frontends\\\\desktop\\\\native\\\\build\",\"frontends\\\\desktop\\\\native\\\\build\\\\Release\",\"engine\\\\ai_segmentation\"\\)\\) { $full = Join-Path $root $p; if \\(Test-Path $full\\) { Write-Output \"EXISTS: $p\"; Get-ChildItem -Path $full | Select-Object -ExpandProperty Name } else { Write-Output \"MISSING: $p\" } })",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(node --version)",
+      "PowerShell(& \"D:\\\\Claude dates 无敌牛娃闪闪\\\\拼豆图纸生成程序\\\\build-native\\\\tests\\\\perler_tests.exe\" 2>&1 | Select-Object -Last 40)",
+      "PowerShell(& \"D:\\\\Claude dates 无敌牛娃闪闪\\\\拼豆图纸生成程序\\\\build-native\\\\tests\\\\perler_tests.exe\" 2>&1 | Select-Object -Last 6)"
+    ]
+  }
+}

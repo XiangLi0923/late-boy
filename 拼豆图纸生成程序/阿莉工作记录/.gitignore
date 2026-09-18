@@ -1,0 +1,63 @@
+# Build outputs
+build/
+dist/
+out/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.wasm
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Engine
+diagnostics.log
+*.png.tmp
+*.pdf.tmp
+
+# Emscripten
+*.js.mem
+*.wasm.map
+*.wasm.debug.wasm
+
+# Build scripts temp
+build-scripts/tmp/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+
+# Electron
+frontends/desktop/dist/
+frontends/desktop/renderer/
+
+# Web
+frontends/web/dist/
+frontends/web/.vite/
+
+# MiniApp
+frontends/miniapp/wasm/*.wasm
+frontends/miniapp/wasm/*.js
